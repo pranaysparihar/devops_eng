@@ -157,3 +157,28 @@ for (let i = 0; i < navigationLinks.length; i++) {
 
   });
 }
+
+function closeAllOpenModals() {
+  let modals = document.getElementsByClassName("modal");
+  if (modals) {
+    for (let i = 0; i < modals.length; i++) {
+      let modal = modals[i];
+      modal.classList.remove("show-modal");
+    }
+  }
+}
+
+//open modal
+function openModal(project) {
+  //close all modals before
+  closeAllOpenModals();
+
+  let modalName = `.modal.${project}`;
+  //get modal
+  let modal = document.querySelector(modalName);
+  //check if modal is set
+  if (modal) {
+    //show modal
+    modal.classList.add("show-modal");
+  }
+}
