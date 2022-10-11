@@ -1221,7 +1221,55 @@ textarea.form-input::-webkit-resizer { display: none; }
 
 .form-btn:disabled:hover::before { background: var(--bg-gradient-jet); }
 
+/*-----------------------------------*\
+  #MODAL Projects
+\*-----------------------------------*/
 
+.modal {
+  display: none;
+  min-width: 59%; 
+  min-height: 65%;
+  border: 1px solid var(--jet);
+  border-radius: 20px;
+  text-align: center;
+  background: var(--eerie-black-2);
+  z-index: 99;
+  padding: 16px;
+  color: var(--white-2);
+  position: absolute;
+  top: 50%;
+  left: 59.8%;
+  transform: translate(-50%, -50%);
+}
+
+.modal .content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0;
+}
+
+.show-modal {
+  display: block;
+}
+
+/* The Close Button */
+.close {
+  color: var(--white-2);
+  position: absolute;
+  right: 20px;
+  top: 0;
+  width: 10px;
+  font-size: 1.8em;
+}
+
+.close:hover,
+.close:focus {
+  color: var(--light-gray-70);
+  text-decoration: none;
+  cursor: pointer;
+}
 
 
 
