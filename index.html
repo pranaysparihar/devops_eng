@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>vCard - Personal Portfolio</title>
+  <title>Pranay - Personal Portfolio</title>
 
   <!--
     - favicon
@@ -26,6 +26,159 @@
 </head>
 
 <body>
+      <!-- modals project-->
+      <div class="modal project-1">
+        <span class="close" onclick="closeAllOpenModals()">&times;</span>
+        <div class="content">
+          <b>IAM Group creation with IAM policy attached and logged in DynamoDB</b> 
+          <br>
+          <br>
+          <p>Create and IAM user and attach him/her to an IAM user group, trigger a lambda function to log the details of the
+            IAM user in a DynamoDB table, the task was automated using boto3 script </p>
+            <br>
+          <ul>
+            <li>1. Create IAM policy following the restrictive policy </li>
+            <br>
+            <li>2. Assign the IAM policies to IAM groups.</li>
+            <br>
+            <li>3. Add IAM users to the group.</li>
+            <br>
+            <li>4. Writing a lambda function to be triggered whenever a user is created.</li>
+            <br>
+            <li>Using the lambda function to log the details of the IAM user in a DynamoDB table.</li>
+            <br>
+            <li>5. Automate the process using python boto script</li>
+          </ul>
+        </div>
+      </div>
+  
+      <div class="modal project-2">
+        <span class="close" onclick="closeAllOpenModals()">&times;</span>
+        <div class="content">
+          <b>Postgres Container Setup </b> 
+          <br>
+          <br>
+          <p>Setup a Postgres container to log files into a Postgres database.</p>
+          <br>
+          <ul>
+            <li>1. Setup Postgres Container </li>
+            <br>
+            <li>2. Write Dockerfile for Postgres container to communicate with frontend.</li>
+            <br>
+            <li>3. Setup NodeJS as a server.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="modal project-3">
+        <span class="close" onclick="closeAllOpenModals()">&times;</span>
+        <div class="content">
+          <b>Setup AWS Route53 for DNS services</b> 
+          <br>
+          <br>
+          <p>Setup AWS Route 53 for DNS services.</p>
+          <br>
+          <ul>
+            <li>1. Setup Geolocation routing policy to tackle latency. </li>
+            <br>
+            <li>2. Setup Elastic IP address.</li>
+            <br>
+            <li>3. Setup Simple routing policy for our EC2 instances.</li>
+            <br>
+            <li>4. Setup weigted routing policy for the distribution of traffic over our subdomain and primary servers.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="modal project-4">
+        <span class="close" onclick="closeAllOpenModals()">&times;</span>
+        <div class="content">Here is my modal text 4</div>
+      </div>
+      <div class="modal project-5">
+        <span class="close" onclick="closeAllOpenModals()">&times;</span>
+        <div class="content">
+          <b>Cross region S3 replication</b> 
+          <br>
+          <br>
+          <p>Create a python script that will trigger cross-region replication for existing objects.</p>
+          <br>
+          <ul>
+            <li>1. Create two S3 buckets in 2 different regions with cross-region replication. </li>
+            <br>
+            <li>2. Attach bucket policies to the S3 bucket.</li>
+            <br>
+            <li>3. Give IAM role permission.</li>
+            <br>
+          </ul>
+        </div>
+      </div>
+      <div class="modal project-6">
+        <span class="close" onclick="closeAllOpenModals()">&times;</span>
+        <div class="content">
+          <b>Setup VPC flow logs querying with S3 and SQS.</b> 
+          <br>
+          <br>
+          <p>I was responsible for streaming the VPC flow logs in an S3 bucket and then query through them using dead letter queues.</p>
+          <br>
+          <ul>
+            <li>1. Saving VPC flow logs in an S3 bucket. </li>
+            <br>
+            <li>2. Query requests filtered down to a security group.</li>
+            <br>
+            <li>3. Query for generating a list of IP addresses.</li>
+            <br>
+            <li>4. Setup user-pool authentication for API Gateway.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="modal project-7">
+        <span class="close" onclick="closeAllOpenModals()">&times;</span>
+        <div class="content">
+          <b>Multi-Stage Deployment for iOS Application</b> 
+          <br>
+          <br>
+          <p>Write a multi-stage deployment YAML file for Azure DevOps YAML file.</p>
+          <br>
+          <ul>
+            <li>1. Write a YAML file for BUILD, TEST and PROD environment.</li>
+            <br>
+            <li>2. Setting up tasks specific to iOS like installing AppleProvisioner and AppleCertManager.</li>
+            <br>
+            <li>3. Setup Pull Request triggers.</li>
+            <br>
+            <li>4. Integrate GitHub along with AzureDevOps pipeline for releases.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="modal project-8">
+        <span class="close" onclick="closeAllOpenModals()">&times;</span>
+        <div class="content">Here is my modal text 8</div>
+      </div>
+      <div class="modal project-9">
+        <span class="close" onclick="closeAllOpenModals()">&times;</span>
+        <div class="content">
+          <b>Failover sequence using Lambda for Database Instances</b> 
+          <br>
+          <br>
+          <p>Write a lambda function to trigger when a MySQL database is not responding to fire up the new database server
+            as a backup. We used 2 lambda function for this task one is the checker function which will check if the MySQL
+            instance is running every minute which is scheduled using CloudWatch Events, the other function is used to shift
+            the traffic from the primary Database instance to the secondary instance, I used the socket and private IP of the
+            database to check the availability of the database.</p>
+          <br>
+          <ul>
+            <li>1. Write a lambda function to trigger when a MySQL database is not responding.</li>
+            <br>
+            <li>2. Write a lambda function to change the instance.</li>
+            <br>
+            <li>3. Setup the recovery database on our EC2 instances</li>
+            <br>
+            <li>4. Setup IAM roles and policies for Lambda to communicate with AWS System Manager.</li>
+            <br>
+            <li>5. Setup StepFunction along with Cloudwatch for lambda function to be triggered every 10 seconds.</li>
+          </ul>
+        </div>
+      </div>
 
   <!--
     - #MAIN
@@ -301,8 +454,6 @@
 
             </li>
 
-
-
           </ul>
 
         </section>
@@ -322,10 +473,10 @@
               <div class="content-card" data-testimonials-item>
 
                 <figure class="testimonials-avatar-box">
-                  <img src="./assets/images/avatar-1.png" alt="Daniel lewis" width="60" data-testimonials-avatar>
+                  <img src="./assets/images/avatar-1.png" alt="Soubhik Mazumdar" width="60" data-testimonials-avatar>
                 </figure>
 
-                <h4 class="h4 testimonials-item-title" data-testimonials-title>Daniel lewis</h4>
+                <h4 class="h4 testimonials-item-title" data-testimonials-title>Soubhik Mazumdar</h4>
 
                 <div class="testimonials-text" data-testimonials-text>
                   <p>
@@ -651,7 +802,7 @@
               <h4 class="h4 timeline-item-title">DevOps Engineer</h4>
               <h7 class="h4 timeline-item-title">Neudesic</h7>
 
-              <span>Sept 2021 — Oct 2021</span>
+              <span>March 2021 — Aug 2021</span>
 
               <p class="timeline-text">
                 1. Created a Windows server image using Hashicorp Packer. <br>
@@ -665,9 +816,9 @@
             <li class="timeline-item">
 
               <h4 class="h4 timeline-item-title">DevOps Intern</h4>
-              <h7 class="h4 timeline-item-title">Neudesic</h7>
+              <h7 class="h4 timeline-item-title">Tivona Global</h7>
 
-              <span>Sept 2021 — Oct 2021</span>
+              <span>Oct 2020 — Feb 2021</span>
 
               <p class="timeline-text">
                 1. Continuous deployment automation using bash scripting. <br>
@@ -772,16 +923,13 @@
             </li>
 
             <li class="filter-item">
-              <button data-filter-btn>Web design</button>
+              <button data-filter-btn>Cloud Projects</button>
             </li>
 
             <li class="filter-item">
-              <button data-filter-btn>Applications</button>
+              <button data-filter-btn>Product</button>
             </li>
 
-            <li class="filter-item">
-              <button data-filter-btn>Web development</button>
-            </li>
 
           </ul>
 
@@ -804,16 +952,13 @@
               </li>
 
               <li class="select-item">
-                <button data-select-item>Web design</button>
+                <button data-select-item>Cloud Projects</button>
               </li>
 
               <li class="select-item">
-                <button data-select-item>Applications</button>
+                <button data-select-item>Product</button>
               </li>
 
-              <li class="select-item">
-                <button data-select-item>Web development</button>
-              </li>
 
             </ul>
 
@@ -821,8 +966,8 @@
 
           <ul class="project-list">
 
-            <li class="project-item  active" data-filter-item data-category="web development">
-              <a href="#">
+            <li class="project-item  active" data-filter-item data-category="cloud projects">
+              <a href="#" onclick="openModal('project-1')">
 
                 <figure class="project-img">
                   <div class="project-item-icon-box">
@@ -832,15 +977,15 @@
                   <img src="./assets/images/project-1.jpg" alt="finance" loading="lazy">
                 </figure>
 
-                <h3 class="project-title">Finance</h3>
+                <h3 class="project-title">IAM policy assigning automation</h3>
 
-                <p class="project-category">Web development</p>
+                <p class="project-category">Cloud Projects</p>
 
               </a>
             </li>
 
-            <li class="project-item  active" data-filter-item data-category="web development">
-              <a href="#">
+            <li class="project-item  active" data-filter-item data-category="cloud projects">
+              <a href="#" onclick="openModal('project-2')">
 
                 <figure class="project-img">
                   <div class="project-item-icon-box">
@@ -852,13 +997,13 @@
 
                 <h3 class="project-title">Orizon</h3>
 
-                <p class="project-category">Web development</p>
+                <p class="project-category">Cloud Projects</p>
 
               </a>
             </li>
 
-            <li class="project-item  active" data-filter-item data-category="web design">
-              <a href="#">
+            <li class="project-item  active" data-filter-item data-category="cloud projects">
+              <a href="#" onclick="openModal('project-3')">
 
                 <figure class="project-img">
                   <div class="project-item-icon-box">
@@ -870,13 +1015,13 @@
 
                 <h3 class="project-title">Fundo</h3>
 
-                <p class="project-category">Web design</p>
+                <p class="project-category">Cloud Projects</p>
 
               </a>
             </li>
 
-            <li class="project-item  active" data-filter-item data-category="applications">
-              <a href="#">
+            <li class="project-item  active" data-filter-item data-category="product">
+              <a href="#" onclick="openModal('project-4')">
 
                 <figure class="project-img">
                   <div class="project-item-icon-box">
@@ -888,13 +1033,13 @@
 
                 <h3 class="project-title">Brawlhalla</h3>
 
-                <p class="project-category">Applications</p>
+                <p class="project-category">Product</p>
 
               </a>
             </li>
 
-            <li class="project-item  active" data-filter-item data-category="web design">
-              <a href="#">
+            <li class="project-item  active" data-filter-item data-category="cloud projects">
+              <a href="#" onclick="openModal('project-5')">
 
                 <figure class="project-img">
                   <div class="project-item-icon-box">
@@ -906,13 +1051,13 @@
 
                 <h3 class="project-title">DSM.</h3>
 
-                <p class="project-category">Web design</p>
+                <p class="project-category">Cloud Projects</p>
 
               </a>
             </li>
 
-            <li class="project-item  active" data-filter-item data-category="web design">
-              <a href="#">
+            <li class="project-item  active" data-filter-item data-category="cloud projects">
+              <a href="#" onclick="openModal('project-6')">
 
                 <figure class="project-img">
                   <div class="project-item-icon-box">
@@ -924,13 +1069,13 @@
 
                 <h3 class="project-title">MetaSpark</h3>
 
-                <p class="project-category">Web design</p>
+                <p class="project-category">Cloud Projects</p>
 
               </a>
             </li>
 
-            <li class="project-item  active" data-filter-item data-category="web development">
-              <a href="#">
+            <li class="project-item  active" data-filter-item data-category="cloud projects">
+              <a href="#" onclick="openModal('project-7')">
 
                 <figure class="project-img">
                   <div class="project-item-icon-box">
@@ -942,13 +1087,13 @@
 
                 <h3 class="project-title">Summary</h3>
 
-                <p class="project-category">Web development</p>
+                <p class="project-category">Cloud Projects</p>
 
               </a>
             </li>
 
-            <li class="project-item  active" data-filter-item data-category="applications">
-              <a href="#">
+            <li class="project-item  active" data-filter-item data-category="product">
+              <a href="#" onclick="openModal('project-8')">
 
                 <figure class="project-img">
                   <div class="project-item-icon-box">
@@ -960,13 +1105,14 @@
 
                 <h3 class="project-title">Task Manager</h3>
 
-                <p class="project-category">Applications</p>
+                <p class="project-category">Product</p>
 
               </a>
             </li>
 
-            <li class="project-item  active" data-filter-item data-category="web development">
-              <a href="#">
+            <li class="project-item  active" data-filter-item data-category="cloud projects">
+              <a href="#" onclick="openModal('project-9')">
+
 
                 <figure class="project-img">
                   <div class="project-item-icon-box">
@@ -978,7 +1124,7 @@
 
                 <h3 class="project-title">Arrival</h3>
 
-                <p class="project-category">Web development</p>
+                <p class="project-category">Cloud Projects</p>
 
               </a>
             </li>
@@ -1206,7 +1352,7 @@
 
           <h3 class="h3 form-title">Contact Form</h3>
 
-          <form action="https://formsubmit.co/559842c52074f0b3ae4660b893810f85" method="POST" class="form" data-form>
+          <form action="https://formsubmit.co/pranaysparihar@gmail.com" method="POST" class="form" data-form>
           <!-- <form action="mailto:pranaysparihar@gmail.com" method = "POST" class="form" data-form> -->
 
             <div class="input-wrapper">
