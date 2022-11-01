@@ -29,33 +29,126 @@
       <!-- modals project-->
       <div class="modal project-1">
         <span class="close" onclick="closeAllOpenModals()">&times;</span>
-        <div class="content">Here is my modal text 1</div>
+        <div class="content">
+          <b>IAM Group creation with IAM policy attached and logged in DynamoDB</b> 
+          <br>
+          <br>
+          <p>Create and IAM user and attach him/her to an IAM user group, trigger a lambda function to log the details of the
+            IAM user in a DynamoDB table, the task was automated using boto3 script </p>
+            <br>
+          <ul>
+            <li>1. Create IAM policy following the restrictive policy </li>
+            <br>
+            <li>2. Assign the IAM policies to IAM groups.</li>
+            <br>
+            <li>3. Add IAM users to the group.</li>
+            <br>
+            <li>4. Writing a lambda function to be triggered whenever a user is created.</li>
+            <br>
+            <li>Using the lambda function to log the details of the IAM user in a DynamoDB table.</li>
+            <br>
+            <li>5. Automate the process using python boto script</li>
+          </ul>
+        </div>
       </div>
   
       <div class="modal project-2">
         <span class="close" onclick="closeAllOpenModals()">&times;</span>
-        <div class="content">Here is my modal text 2</div>
+        <div class="content">
+          <b>Postgres Container Setup </b> 
+          <br>
+          <br>
+          <p>Setup a Postgres container to log files into a Postgres database.</p>
+          <br>
+          <ul>
+            <li>1. Setup Postgres Container </li>
+            <br>
+            <li>2. Write Dockerfile for Postgres container to communicate with frontend.</li>
+            <br>
+            <li>3. Setup NodeJS as a server.</li>
+          </ul>
+        </div>
       </div>
 
       <div class="modal project-3">
         <span class="close" onclick="closeAllOpenModals()">&times;</span>
-        <div class="content">Here is my modal text 3</div>
+        <div class="content">
+          <b>Setup AWS Route53 for DNS services</b> 
+          <br>
+          <br>
+          <p>Setup AWS Route 53 for DNS services.</p>
+          <br>
+          <ul>
+            <li>1. Setup Geolocation routing policy to tackle latency. </li>
+            <br>
+            <li>2. Setup Elastic IP address.</li>
+            <br>
+            <li>3. Setup Simple routing policy for our EC2 instances.</li>
+            <br>
+            <li>4. Setup weigted routing policy for the distribution of traffic over our subdomain and primary servers.</li>
+          </ul>
+        </div>
       </div>
+
       <div class="modal project-4">
         <span class="close" onclick="closeAllOpenModals()">&times;</span>
         <div class="content">Here is my modal text 4</div>
       </div>
       <div class="modal project-5">
         <span class="close" onclick="closeAllOpenModals()">&times;</span>
-        <div class="content">Here is my modal text 5</div>
+        <div class="content">
+          <b>Cross region S3 replication</b> 
+          <br>
+          <br>
+          <p>Create a python script that will trigger cross-region replication for existing objects.</p>
+          <br>
+          <ul>
+            <li>1. Create two S3 buckets in 2 different regions with cross-region replication. </li>
+            <br>
+            <li>2. Attach bucket policies to the S3 bucket.</li>
+            <br>
+            <li>3. Give IAM role permission.</li>
+            <br>
+          </ul>
+        </div>
       </div>
       <div class="modal project-6">
         <span class="close" onclick="closeAllOpenModals()">&times;</span>
-        <div class="content">Here is my modal text 6</div>
+        <div class="content">
+          <b>Setup VPC flow logs querying with S3 and SQS.</b> 
+          <br>
+          <br>
+          <p>I was responsible for streaming the VPC flow logs in an S3 bucket and then query through them using dead letter queues.</p>
+          <br>
+          <ul>
+            <li>1. Saving VPC flow logs in an S3 bucket. </li>
+            <br>
+            <li>2. Query requests filtered down to a security group.</li>
+            <br>
+            <li>3. Query for generating a list of IP addresses.</li>
+            <br>
+            <li>4. Setup user-pool authentication for API Gateway.</li>
+          </ul>
+        </div>
       </div>
       <div class="modal project-7">
         <span class="close" onclick="closeAllOpenModals()">&times;</span>
-        <div class="content">Here is my modal text 7</div>
+        <div class="content">
+          <b>Multi-Stage Deployment for iOS Application</b> 
+          <br>
+          <br>
+          <p>Write a multi-stage deployment YAML file for Azure DevOps YAML file.</p>
+          <br>
+          <ul>
+            <li>1. Write a YAML file for BUILD, TEST and PROD environment.</li>
+            <br>
+            <li>2. Setting up tasks specific to iOS like installing AppleProvisioner and AppleCertManager.</li>
+            <br>
+            <li>3. Setup Pull Request triggers.</li>
+            <br>
+            <li>4. Integrate GitHub along with AzureDevOps pipeline for releases.</li>
+          </ul>
+        </div>
       </div>
       <div class="modal project-8">
         <span class="close" onclick="closeAllOpenModals()">&times;</span>
@@ -63,7 +156,28 @@
       </div>
       <div class="modal project-9">
         <span class="close" onclick="closeAllOpenModals()">&times;</span>
-        <div class="content">Here is my modal text 9g</div>
+        <div class="content">
+          <b>Failover sequence using Lambda for Database Instances</b> 
+          <br>
+          <br>
+          <p>Write a lambda function to trigger when a MySQL database is not responding to fire up the new database server
+            as a backup. We used 2 lambda function for this task one is the checker function which will check if the MySQL
+            instance is running every minute which is scheduled using CloudWatch Events, the other function is used to shift
+            the traffic from the primary Database instance to the secondary instance, I used the socket and private IP of the
+            database to check the availability of the database.</p>
+          <br>
+          <ul>
+            <li>1. Write a lambda function to trigger when a MySQL database is not responding.</li>
+            <br>
+            <li>2. Write a lambda function to change the instance.</li>
+            <br>
+            <li>3. Setup the recovery database on our EC2 instances</li>
+            <br>
+            <li>4. Setup IAM roles and policies for Lambda to communicate with AWS System Manager.</li>
+            <br>
+            <li>5. Setup StepFunction along with Cloudwatch for lambda function to be triggered every 10 seconds.</li>
+          </ul>
+        </div>
       </div>
 
   <!--
@@ -339,8 +453,6 @@
               </div>
 
             </li>
-
-
 
           </ul>
 
@@ -865,7 +977,7 @@
                   <img src="./assets/images/project-1.jpg" alt="finance" loading="lazy">
                 </figure>
 
-                <h3 class="project-title">Finance</h3>
+                <h3 class="project-title">IAM policy assigning automation</h3>
 
                 <p class="project-category">Cloud Projects</p>
 
