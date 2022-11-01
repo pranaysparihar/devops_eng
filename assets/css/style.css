@@ -1221,6 +1221,60 @@ textarea.form-input::-webkit-resizer { display: none; }
 
 .form-btn:disabled:hover::before { background: var(--bg-gradient-jet); }
 
+/*-----------------------------------*\
+  #MODAL Projects
+\*-----------------------------------*/
+
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 59.8%;
+  transform: translate(-50%, calc(-50% - 10px));
+  z-index: 300;
+  background: var(--eerie-black-2);
+  display: flex;
+  min-width: 9500px;
+  /*min-width: 59%; */
+  min-height: 65%;
+  border: 1px solid var(--jet);
+  border-radius: 20px;
+  text-align: center;
+  
+
+  padding: 16px;
+  color: var(--white-2);
+
+
+
+}
+
+
+.modal .content {
+  padding: 20px; 
+}
+
+.show-modal {
+  display: block;
+}
+
+/* The Close Button */
+.close {
+  color: var(--white-2);
+  position: absolute;
+  right: 20px;
+  top: 0;
+  width: 10px;
+  font-size: 1.8em;
+}
+
+.close:hover,
+.close:focus {
+  color: var(--light-gray-70);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
 
 
 
@@ -1638,10 +1692,124 @@ textarea.form-input::-webkit-resizer { display: none; }
     width: max-content;
     margin-left: auto;
   }
+    /**
+   * CONTACT
+   */
+
+  .input-wrapper { grid-template-columns: 1fr 1fr; }
+
+  .form-btn {
+    width: max-content;
+    margin-left: auto;
+  }
   
 }
 
+/**
+ * responsive lesser than 1024px screen for portfolio
+ */
+@media (min-width: 100px) {
+  .modal {
+    position: fixed;
+    top: 49.0%;
+    left: 49.8%;
+    transform: translate(-50%, calc(-50% - 10px));
+    z-index: 300;
+    background: var(--eerie-black-2);
+    display: none;
+    min-width: 375px;
+    /*min-width: 59%; */
+    min-height: 90%;
+    border: 1px solid var(--jet);
+    border-radius: 20px;
+    text-align: left;
+    padding: 16px;
+    color: var(--white-2);
+  
+  }
+  
+  .modal .content {
+    padding: 20px; 
+    max-height: calc(100vh - 200px);
+    overflow-y: auto;
+  }
+  
+  .show-modal {
+    display: block;
+  }
+  
+  /* The Close Button */
+  .close {
+    color: var(--white-2);
+    position: absolute;
+    right: 20px;
+    top: 0;
+    width: 10px;
+    font-size: 1.8em;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: var(--light-gray-70);
+    text-decoration: none;
+    cursor: pointer;
+  }  
 
+}
+
+
+/**
+ * responsive greater than 720px screen for portfolio
+ */
+ @media (min-width: 720px) {
+  .modal {
+    position: fixed;
+    top: 50%;
+    left: 59.8%;
+    transform: translate(-50%, calc(-50% - 10px));
+    z-index: 300;
+    background: var(--eerie-black-2);
+    display: none;
+    min-width: 902px;
+    /*min-width: 59%; */
+    min-height: 80%;
+    border: 1px solid var(--jet);
+    border-radius: 20px;
+    text-align: left;   
+  
+    padding: 16px;
+    color: var(--white-2);
+  
+  
+  }
+   
+  .modal .content {
+    padding: 20px; 
+  }
+  
+  .show-modal {
+    display: block;
+  }
+  
+  /* The Close Button */
+  .close {
+    color: var(--white-2);
+    position: absolute;
+    right: 20px;
+    top: 0;
+    width: 10px;
+    font-size: 1.8em;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: var(--light-gray-70);
+    text-decoration: none;
+    cursor: pointer;
+  }  
+
+
+}
 
 
 
