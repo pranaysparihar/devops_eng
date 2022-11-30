@@ -1,1 +1,0 @@
-This is an index file that will not affect the website, this was used to setup GitHub repository 
