@@ -4,11 +4,10 @@ metadata:
   name: myapp-pod
   labels: 
     app: myapp
-    type: server
 spec:
   containers:
   - name: nginx-container
-    image: html-server-image:v1
+    image: html-server-image:latest
     imagePullPolicy: IfNotPresent
     ports: 
     - containerPort: 3000
